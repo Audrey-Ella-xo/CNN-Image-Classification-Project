@@ -1,0 +1,26 @@
+
+# # Folders to ignore
+# /dataset*/
+# /Images CA/
+# /Logs/
+
+# # Files to ignore
+# CA_ProjectDLGA.ipynb
+# clean_files.ipynb
+# CNN veg.ipynb
+# CNN_DLGA.ipynb
+# Copy of Codigo_sin_VGG16, ResNet50 o InceptionV3.ipynb
+# model_cnn_improved.h5
+
+# Folders to ignore
+/dataset*/
+/Images\ CA/
+/Logs/
+
+# Files to ignore
+CA_ProjectDLGA.ipynb
+clean_files.ipynb
+CNN\ veg.ipynb
+CNN_DLGA.ipynb
+Copy\ of\ Codigo_sin_VGG16,\ ResNet50\ o\ InceptionV3.ipynb
+model_cnn_improved.h5
