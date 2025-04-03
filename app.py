@@ -11,12 +11,13 @@ import json
 import pandas as pd
 
 # Google Drive file IDs for model, class labels, and descriptions
-MODEL_DRIVE_ID = "10J34f1PsyqYXfj6axuvGAQVu7R-lJwZ-"
-LABELS_DRIVE_ID = "your_labels_json_id_here"  # Replace with actual file ID
-DESCRIPTIONS_DRIVE_ID = "your_descriptions_csv_id_here"  # Replace with actual file ID
+MODEL_DRIVE_ID = "1Tfx6zh-USlWEex-KIkWTuRYJAfSk54BW"
+LABELS_DRIVE_ID = "1-9GGPlJGBgzmFg8ZGA4p1_hKdvWlEsz-"  # Replace with actual file ID
+DESCRIPTIONS_DRIVE_ID = "1E6l0G1rD4eGWSUycuKDbDCtnWIgqeWQH"  # Replace with actual file ID
 
 # Local paths
-MODEL_PATH = "model.h5"
+# MODEL_PATH = "model.h5"
+MODEL_PATH = "final_memory_efficient_model.h5"
 LABELS_PATH = "labels.json"
 DESCRIPTIONS_PATH = "class_descriptions.csv"
 
@@ -77,7 +78,7 @@ uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg
 
 def preprocess_image(img_path):
     """Preprocess image same as in notebook"""
-    img = image.load_img(img_path, target_size=(150, 150))  # Match trained model input size
+    img = image.load_img(img_path, target_size=(64, 64))  # Match trained model input size
     img_array = image.img_to_array(img) / 255.0  # Normalize
     img_array = np.expand_dims(img_array, axis=0)  # Expand dims for batch
     return img_array
